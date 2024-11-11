@@ -1,5 +1,9 @@
-function getShippingMessage(content, padding, border) {
-  const width = Number.parseFloat(content + (padding + border) * 2);
+function getElementWidth(content, padding, border) {
+  const contentWidth = parseFloat(content);
+  const paddingWidth = parseFloat(padding) * 2;
+  const borderWidth = parseFloat(border) * 2; 
+  const width = contentWidth + paddingWidth + borderWidth;
+
   return width;
 }
 console.log(getElementWidth("50px", "8px", "4px")); // 74
